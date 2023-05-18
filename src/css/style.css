@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button {
+  all: unset;
+  cursor: pointer;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.main-img {
+  width: 626px;
+  height: 366px;
+  background: url(../../public/img/car.png);
+  /* background: black; */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin: 0 auto;
+  scale: 1;
+  overflow: hidden;
+}
+
+.price-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+  margin-top: 100px;
+  position: relative;
+}
+
+.btn {
+  display: flex;
+  flex-direction: column;
+}
+
+.btn button img {
+  width: 16px;
+  align-items: center;
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  position: relative;
+}
+
+.temprature span {
+  margin-right: 60px;
+}
+
+.feature span {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.speed::before,
+.temprature::before,
+.weels::before {
+  position: absolute;
+  top: -8px;
+  left: 0;
+  display: inline;
+  font-size: 12px;
+}
+
+.speed::before {
+  content: 'Скорость автомобиля';
+}
+
+.temprature::before {
+  content: 'Температура за окнами';
+}
+
+.weels::before {
+  content: 'Диски';
+}
+
+.vkl {
+  width: 66px;
+  height: 33px;
+  background: #000;
+  border-radius: 20px;
+  padding: 3px;
+  cursor: pointer;
+}
+
+.circle {
+  width: 27px;
+  height: 27px;
+  background-color: #b7b7b7;
+  border-radius: 100%;
+}
+
+.car-view .circle {
+  width: 27px;
+  height: 27px;
+  background-color: #12a835;
+  border-radius: 100%;
+  
+}
+
+.air-condition::before, .long-range::before, .car-view::before {
+  position: absolute;
+  top: -10px;
+  font-size: 12px;
+}
+
+.air-condition::before {
+  content: 'Кондиционер';
+}
+
+.long-range::before {
+  content: 'Версия Long Range';
+}
+
+.car-view::before  {
+  content: 'Вид автомобиля';
+}
