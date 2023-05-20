@@ -23,8 +23,20 @@ button {
   background-size: cover;
   background-position: center;
   margin: 0 auto;
-  scale: 1;
+  /* scale: 1; */
   overflow: hidden;
+  position: relative;
+  transition: 1s ease;
+}
+
+.hand {
+  width: 20px;
+  height: 5px;
+  background: #000;
+  position: absolute;
+  top: 44%;
+  left: 49%;
+  opacity: -1;
 }
 
 .price-box {
@@ -60,7 +72,7 @@ button {
   align-items: center;
   justify-content: center;
   gap: 20px;
-  position: relative;
+  /* position: relative; */
 }
 
 .temprature span {
@@ -76,8 +88,8 @@ button {
 .temprature::before,
 .weels::before {
   position: absolute;
-  top: -8px;
-  left: 0;
+  top: -10px;
+  /* left: 0; */
   display: inline;
   font-size: 12px;
 }
@@ -97,28 +109,29 @@ button {
 .vkl {
   width: 66px;
   height: 33px;
-  background: #000;
+  background: #adacac;
   border-radius: 20px;
   padding: 3px;
   cursor: pointer;
 }
 
-.circle {
+.cyrcle {
   width: 27px;
   height: 27px;
-  background-color: #b7b7b7;
+  background-color: gray;
   border-radius: 100%;
+  transition: 1s ease;
 }
 
-.car-view .circle {
-  width: 27px;
-  height: 27px;
-  background-color: #12a835;
-  border-radius: 100%;
-  
+.moved {
+  margin-left: 33px;
+  background-color: green;
+  transition: 1s ease;
 }
 
-.air-condition::before, .long-range::before, .car-view::before {
+.air-condition::before,
+.long-range::before,
+.car-view::before {
   position: absolute;
   top: -10px;
   font-size: 12px;
@@ -132,6 +145,71 @@ button {
   content: 'Версия Long Range';
 }
 
-.car-view::before  {
+.car-view::before {
   content: 'Вид автомобиля';
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  z-index: 1;
+}
+
+.bg {
+  display: none;
+  width: 100%;
+  height: 100vh;
+  background: #ffffff;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.color-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 50px;
+  position: relative;
+}
+
+.color {
+  width: 30px;
+  height: 30px;
+  background: #000;
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+.color-box .car-view {
+  margin-left: 50px;
+}
+
+.color-box .car-view::before {
+  top: -20px;
+}
+
+.white-color {
+  background: #EFEFEF;
+}
+
+.biege-color {
+  background: #E6DDD0;
+}
+
+.modal .main-img {
+  width: 833px;
+  height: 468px;
+  background: url(../../public/img/black.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin: 0 auto;
+  scale: 1;
+  overflow: hidden;
+  margin-bottom: 50px;
 }
