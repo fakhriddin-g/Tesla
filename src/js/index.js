@@ -1,14 +1,15 @@
 // Arrow
 let up = document.querySelectorAll('.up')
 let down = document.querySelectorAll('.down')
-// 
 // Row
 let row = document.querySelector('.row')
 // Modal
 let modalCar = document.querySelector('.modal .main-img')
-let whiteColor = document.querySelector('.white-color')
-let blackColor = document.querySelector('.black-color')
-let biegeColor = document.querySelector('.biege-color')
+
+let colorsBtn = document.querySelectorAll('.color')
+let totalPrice = document.querySelector('.total-price')
+
+
 let modal = document.querySelector('.modal')
 let modalBg = document.querySelector('.bg')
 // Animation
@@ -22,21 +23,26 @@ let longRangeCycle = document.querySelector('.long-range-cyrcle')
 let carViews = document.querySelectorAll('.car-view')
 // let carViewCycle = document.querySelector('.car-cyrcle')
 
-// Code
-whiteColor.onclick = () => {
-  modalCar.style.background = 'url(../../public/img/white.png)'
-  modalCar.style.backgroundSize = 'cover'
+// Color Object
+let colors = {
+  black: 'url(../../public/img/black.png)',
+  white: 'url(../../public/img/white.png)',
+  biege: 'url(../../public/img/biege.png)'
 }
 
-blackColor.onclick = () => {
-  modalCar.style.background = 'url(../../public/img/black.png)'
-  modalCar.style.backgroundSize = 'cover'
+let prices = {
+  black: '0',
+  white: '10',
+  biege: '20'
 }
 
-biegeColor.onclick = () => {
-  modalCar.style.background = 'url(../../public/img/biege.png)'
-  modalCar.style.backgroundSize = 'cover'
-}
+colorsBtn.forEach(btn => {
+  let key = btn.getAttribute('data-color')
+  btn.onclick = () => {
+    modalCar.style.backgroundImage = colors[key]
+    totalPrice.innerHTML = prices[key]
+  }
+})
 
 animationImg.onclick = () => {
   row.style.display = 'none'
